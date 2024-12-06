@@ -1,0 +1,57 @@
+#gerenciarTarefaOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#gerenciarTarefaOverlay .popup-content {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: popupAppear 0.2s ease-out;
+}
+
+#gerenciarTarefaOverlay.active {
+    display: flex;
+}
+
+#gerenciarTarefaOverlay textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#gerenciarTarefaOverlay .popup-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#gerenciarTarefaOverlay .popup-footer-right {
+    display: flex;
+    gap: 12px;
+}
+
+/* Tema escuro */
+body.dark #gerenciarTarefaOverlay .popup-content {
+    background: var(--surface-dark);
+}
+
+body.dark #gerenciarTarefaOverlay .popup-header {
+    border-color: var(--border-dark);
+}
+
+body.dark #gerenciarTarefaOverlay .popup-footer {
+    border-color: var(--border-dark);
+} 

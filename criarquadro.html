@@ -1,0 +1,28 @@
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+        <h2>Criar Novo Quadro</h2>
+        <input type="text" id="boardName" placeholder="Nome do Quadro">
+        <textarea id="boardDescription" placeholder="Descrição (opcional)"></textarea>
+
+        <div class="color-picker-container">
+            <div class="color-picker">
+                <h3>Escolha uma cor para o quadro</h3>
+                <div class="color-options">
+                    <button class="color-option" data-color="#6C63FF" style="background-color: #6C63FF"></button>
+                    <button class="color-option" data-color="#FF6B6B" style="background-color: #FF6B6B"></button>
+                    <button class="color-option" data-color="#4ECB71" style="background-color: #4ECB71"></button>
+                    <button class="color-option" data-color="#FFA94D" style="background-color: #FFA94D"></button>
+                    <button class="color-option" data-color="#845EF7" style="background-color: #845EF7"></button>
+                    <button class="color-option custom-color" style="width: 36px; height: 36px;">
+                        <input type="color" id="colorPicker" value="#6C63FF" style="width: 100%; height: 100%;">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-buttons">
+            <button id="createBoardBtn">Criar</button>
+            <button id="closePopupBtn">Cancelar</button>
+        </div>
+    </div>
+</div> 

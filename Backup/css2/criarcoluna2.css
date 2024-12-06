@@ -1,0 +1,70 @@
+#criarColunaOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#criarColunaOverlay .popup-content {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.2s ease-out;
+}
+
+#criarColunaOverlay.active {
+    display: flex;
+}
+
+#criarColunaOverlay.active .popup-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tema escuro */
+body.dark #criarColunaOverlay .popup-content {
+    background-color: var(--surface-dark);
+}
+
+/* Estilos específicos do formulário */
+#criarColunaOverlay .form-group {
+    margin-bottom: 16px;
+}
+
+#criarColunaOverlay .form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#criarColunaOverlay .form-help {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+body.dark #criarColunaOverlay .form-input {
+    background-color: var(--bg-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark #criarColunaOverlay .form-help {
+    color: #9ca3af;
+}

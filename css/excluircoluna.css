@@ -1,0 +1,160 @@
+#excluirColunaOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+#excluirColunaOverlay .popup-content {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: popupAppear 0.2s ease-out;
+    margin: auto;
+    transform: none !important;
+    left: auto !important;
+}
+
+#excluirColunaOverlay.active {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#excluirColunaOverlay.active .popup-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark #excluirColunaOverlay .popup-content {
+    background: var(--surface-dark);
+}
+
+.confirmation-message {
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.warning-message {
+    font-size: 14px;
+    color: #ef4444;
+    margin-bottom: 0;
+}
+
+.delete-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: #dc2626;
+}
+
+body.dark .confirmation-message {
+    color: #e5e7eb;
+}
+
+body.dark .warning-message {
+    color: #f87171;
+}
+
+#excluirColunaOverlay .popup-header {
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#excluirColunaOverlay .popup-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: #ef4444;
+    font-size: 20px;
+}
+
+#excluirColunaOverlay .popup-header svg {
+    stroke: #ef4444;
+}
+
+#excluirColunaOverlay .popup-body {
+    padding: 24px;
+}
+
+#excluirColunaOverlay .popup-footer {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+#excluirColunaOverlay .delete-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#excluirColunaOverlay .delete-button:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
+
+#excluirColunaOverlay .delete-button svg {
+    stroke: currentColor;
+}
+
+body.dark #excluirColunaOverlay .popup-header {
+    border-color: var(--border-dark);
+}
+
+body.dark #excluirColunaOverlay .confirmation-message {
+    color: var(--text-dark);
+}
+
+body.dark #excluirColunaOverlay .popup-footer {
+    border-color: var(--border-dark);
+}
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
